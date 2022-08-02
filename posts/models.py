@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 class Post(models.Model):
     class Meta(object):
-        db_table = 'posts'
+        db_table = 'post'
 
     name = models.CharField(
         'Name', blank=False, null=False, max_length= 14, db_index=True, default='Anonymous'
@@ -20,7 +20,9 @@ class Post(models.Model):
         'image', blank=True, db_index=True
     )
 
-    like_count= models.PositiveIntegerField(
-        'Like Count', default=0, null=True, blank=True    
+    likes= models.PositiveIntegerField(
+        'like', default=0, blank=True, db_index=True
     )
+
+   
     

@@ -4,7 +4,9 @@ Common
 
 html,
 body {
-    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: #e6fef7;
 }
 
 .content {
@@ -18,23 +20,76 @@ body {
 /*
 Post
 ****************************/
+.content {
+    max-width: 600px;
+    height: fit-content;
+    margin: 0 auto;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  
+.main {
+    width: 100%;
+  max-width: 600px;
+  border-left: 2px solid rgb(235, 238, 240);
+  border-right: 2px solid rgb(235, 238, 240);
+  border-bottom: 1px solid #ccc;
+
+}
+
+.main-header {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.main-header .logo{
+    width: 50px;
+    margin-right: 20px;
+}
+
+.main-header h1 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+}
 
 .post_form {
     padding: 20px 40px;
-    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
+
+button {
+    margin-top: 10px;
+color: #e6fef7;
+background-color: #3494dd;
+margin-left: 5%;
+width: 16%;
+height: 41px;
+border: none;
+border-radius: 5px;
+}
+
+
+
 
 .post_form input {
     width: 70%;
     margin-bottom: 10px;
     padding:10px;
     border: 1px solid #ccc;
+    background-color: #3494dd;
 }
-
 .post_form textarea {
     width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
+    background-color: #3494dd;
+}
+
+::placeholder {
+    color: black;
+    opacity:1;
 }
 
 .posts ul {
@@ -95,6 +150,12 @@ Post
 
 .posts li .name_body .datetime {
     color: gray;
+}
+
+
+
+img.post-img {
+    width: 300px;
 }
 
 @media screen and (max-width: 500px) {
